@@ -1,0 +1,32 @@
+{
+  "name": "cypress-api-test-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "main.js",
+  "scripts": {
+    "stubs": "node ./cypress/fixtures/server.js",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --spec **/*.spec.js",
+    "lint": "eslint cypress",
+    "clean:reports": "rm -rf testOutput/",
+    "test": "npm run clean:reports && cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.1.0",
+    "eslint-plugin-cypress": "^2.11.3",
+    "json-server": "^0.16.3",
+    "mocha": "^9.0.3",
+    "mochawesome": "^6.2.2",
+    "mochawesome-report-generator": "^5.2.0",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.8"
+  },
+  "description": ""
+}
