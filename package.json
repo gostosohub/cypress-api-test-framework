@@ -26,7 +26,8 @@
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/node": "^7.14.7",
-    "@babel/preset-env": "^7.14.8"
+    "@babel/preset-env": "^7.14.8",
+    "@bahmutov/cy-api": "^1.5.0"
   },
   "description": ""
 }

@@ -3,10 +3,6 @@
 describe('Opponent API', () => {
   var newId;
 
-  beforeEach(() => {
-    cy.request('http://localhost:8080/db/seed')
-  })
-/*
   it('Verify request returns json', () => {
     cy.request({
       method: 'GET',
@@ -56,14 +52,8 @@ describe('Opponent API', () => {
     cy.request('/opponents/' + 2).then
     ((response) => {
       expect(response.status).to.eq(200);
-      expect(response.body).to.have.property('gameId', '1234569')
-      expect(response.body).to.have.property('sqlId', '1234569')
-      expect(response.body).to.have.property('opponent', 'Opponent added via test')
-      expect(response.body).to.have.property('opponentId', '123458')
     })
   })
-*/
-
 
 it("Delete an opponent", () => {
     cy.request({
@@ -75,9 +65,9 @@ it("Delete an opponent", () => {
     })
   })
 
- /* it('Verify the opponent was deleted', () => {
+ it('Verify the opponent was deleted', () => {
     cy.request({url: '/opponents/' + 1, failOnStatusCode: false}).then((response) => {
       expect(response.status).to.eq(404)
     })
-  })*/
+  })
 })
