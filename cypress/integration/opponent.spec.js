@@ -1,7 +1,11 @@
 /// <reference types="cypress" />
 
-describe('Opponent API', () => {
+describe('Test login endpoint /Opponent when logged in as coach ', () => {
   var newId;
+
+  beforeEach(() => {
+    //cy.login()
+  })
 
   it('Verify request returns json', () => {
     cy.request({
@@ -12,7 +16,7 @@ describe('Opponent API', () => {
       .should('include', 'application/json')
   })
 
-  it('Verify the request returns 404 code', () => {
+  it('Verify the request returns 404 code when id not found', () => {
     cy.request({
       method:'GET',
       url: '/opponents/999',
@@ -21,7 +25,7 @@ describe('Opponent API', () => {
       .should('be.equal', 404)
   })
 
-  it('Verify the GET request returns 200', () => {
+  it('Verify the GET request returns 200 when successful', () => {
     cy.request({
       method: 'GET',
       url: '/opponents'})
@@ -49,13 +53,13 @@ describe('Opponent API', () => {
   })
 
   it("Verify the new opponent has been created", () => {
-    cy.request('/opponents/' + 2).then
+    cy.request('/opponents/4').then
     ((response) => {
       expect(response.status).to.eq(200);
     })
   })
 
-it("Delete an opponent", () => {
+  it("Verify the delete request returns 204 code when successful", () => {
     cy.request({
       method: 'DELETE',
       url: '/opponents/1',
@@ -65,9 +69,19 @@ it("Delete an opponent", () => {
     })
   })
 
- it('Verify the opponent was deleted', () => {
-    cy.request({url: '/opponents/' + 1, failOnStatusCode: false}).then((response) => {
+  it('Verify the opponent was deleted', () => {
+    cy.request({url: '/opponents/1', failOnStatusCode: false}).then((response) => {
       expect(response.status).to.eq(404)
     })
   })
+
+  it('Verify the opponent was deleted', () => {
+    cy.request({url: '/opponents/1', failOnStatusCode: false}).then((response) => {
+      expect(response.status).to.eq(404)
+    })
+  })
+
+  it('Verify the opponent can be updated', () => {
+  })
+
 })

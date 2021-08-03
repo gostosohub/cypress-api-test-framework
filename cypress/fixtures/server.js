@@ -1,10 +1,8 @@
 const jsonServer =  require('json-server');
-const opponents = require("./opponents");
 
 const server = jsonServer.create()
 const router = jsonServer.router('./cypress/fixtures/opponents.json')
 const middlewares = jsonServer.defaults()
-
 
 server.use(middlewares)
 
