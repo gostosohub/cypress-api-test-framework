@@ -52,7 +52,7 @@ describe('Test login endpoint /Opponent when logged in as coach ', () => {
     })
   })
 
-  it("Verify the new opponent has been created", () => {
+  it("Verify the new opponent has been created and returns 200", () => {
     cy.request('/opponents/4').then
     ((response) => {
       expect(response.status).to.eq(200);
@@ -81,7 +81,10 @@ describe('Test login endpoint /Opponent when logged in as coach ', () => {
     })
   })
 
-  it('Verify the opponent can be updated', () => {
+  it('Verify the opponent can be updated and returns 200', () => {
   })
 
+  it('Verify/mock some scenario to return 500', () => {
+    //return 500
+  })
 })

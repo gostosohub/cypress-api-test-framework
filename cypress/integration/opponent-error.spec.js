@@ -1,6 +1,6 @@
 describe('Test login endpoint /Opponent when not logged in as coach ', () => {
 
-  it('Verify response when missing/bas authentication', () => {
+  it('Verify response when missing authentication', () => {
     //return 401
   })
 
@@ -8,7 +8,7 @@ describe('Test login endpoint /Opponent when not logged in as coach ', () => {
     //return 500
   })
 
-  it('\'Verify response when a player who is not coach try to use opponent api', () => {
+  it('Verify response when a player who is not a coach try to use opponent api', () => {
     //return 403
   })
 })
