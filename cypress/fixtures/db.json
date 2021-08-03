@@ -1,34 +1,31 @@
 {
   "opponents": [
     {
-      "id": 1,
+      "opponentId": "123456",
       "gameId": "1234567",
       "sqlId": "1234567",
       "date": "2016-01-01T19:00:00",
       "opponent": "TestOpponent",
-      "opponentId": "123456",
       "isHome": true,
       "gameType": 0,
       "categories": []
     },
     {
-      "id": 2,
+      "opponentId": "123457",
       "gameId": "1234567",
       "sqlId": "1234567",
       "date": "2016-01-01T19:00:00",
       "opponent": "TestOpponent",
-      "opponentId": "123456",
       "isHome": true,
       "gameType": 0,
       "categories": []
     },
     {
-      "id": 3,
+      "opponentId": "123458",
       "gameId": "1234567",
       "sqlId": "1234567",
       "date": "2016-01-01T19:00:00",
       "opponent": "TestOpponent",
-      "opponentId": "123456",
       "isHome": true,
       "gameType": 0,
       "categories": []

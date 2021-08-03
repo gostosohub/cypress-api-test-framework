@@ -3,6 +3,10 @@
 describe('Test login endpoint /Opponent when logged in as coach ', () => {
   var newId;
 
+  before(()=>{
+    //pre seed the data
+  })
+
   beforeEach(() => {
     //cy.login()
   })
@@ -53,7 +57,7 @@ describe('Test login endpoint /Opponent when logged in as coach ', () => {
   })
 
   it("Verify the new opponent has been created and returns 200", () => {
-    cy.request('/opponents/4').then
+    cy.request('/opponents/2').then
     ((response) => {
       expect(response.status).to.eq(200);
     })
